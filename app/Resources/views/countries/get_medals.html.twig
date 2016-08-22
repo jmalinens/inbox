@@ -1,0 +1,35 @@
+{# empty Twig template #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2 class="page-header">Medals</h2>
+    <table class="table table-striped"> 
+        <thead> 
+            <tr> 
+                <th>#</th> 
+                <th>Country Name</th> 
+                <th>Gold Count</th> 
+                <th>Bronze Count</th> 
+                <th>Silver Count</th> 
+                <th>Total Count</th> 
+                <th>Place</th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            {% for country in countries %}
+            <tr> 
+                <th scope="row">{{country.id}}</th> 
+                <td>{{country.countryName}}</td> 
+                <td>{{country.goldCount}}</td> 
+                <td>{{country.bronzeCount}}</td> 
+                <td>{{country.silverCount}}</td> 
+                <td>{{country.totalCount}}</td> 
+                <td>{{country.place}}</td>
+            </tr> 
+            {% endfor %}
+        </tbody> 
+    </table>
+
+    
+    
+{% endblock %}
